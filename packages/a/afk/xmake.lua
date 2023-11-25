@@ -2,7 +2,7 @@ package("AFK")
     set_description("Andrew's field kit. C++ utilities library.")
 
     add_urls("https://github.com/Al-Andrew/AFK.git")
-    add_versions("0.0.1", "4496896190d7b6aed3b394081f6f1d594bb8c4de")
+    add_versions("0.0.1", "07052b41e607ab468dcf5f9f00b6a2780ddb87ab")
 
     on_install(function (package)
         local configs = {}
@@ -10,5 +10,5 @@ package("AFK")
             configs.kind = "shared"
         end
         import("package.tools.xmake").install(package, configs)
-        os.copy("include", package:installdir())
+        os.cp("include", package:installdir())
     end)
