@@ -10,4 +10,5 @@ package("AFK")
             configs.kind = "shared"
         end
         import("package.tools.xmake").install(package, configs)
+        os.copy("include", package:installdir())
     end)
